@@ -27,18 +27,18 @@
         /* Gallery container */
         .image-gallery {
             /* display: grid; */
-            gap: 15px;
+            /* gap: 15px; */
             width: 100%;
             max-width: 100%;
             grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            padding: 10px;
+            /* padding: 10px; */
         }
 
         /* Individual image styling */
         .image-gallery img {
             width: 100%;
             height: auto;
-            border-radius: 12px;
+            /* border-radius: 12px; */
             object-fit: cover;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             cursor: pointer;
@@ -46,10 +46,10 @@
         }
 
         /* Hover effect */
-        /* .image-gallery img:hover {
+        .image-gallery img:hover {
             transform: scale(1.05);
             box-shadow: 0 12px 20px rgba(0,0,0,0.2);
-        } */
+        }
 
         /* Optional: responsive behavior for very small screens */
         @media (max-width: 600px) {
