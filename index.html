@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOM Seafood Menu</title>
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Mean SON">
+
+    <style>
+        /* Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f8f8;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        /* Gallery container */
+        .image-gallery {
+            /* display: grid; */
+            gap: 15px;
+            width: 100%;
+            max-width: 1200px;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            padding: 10px;
+        }
+
+        /* Individual image styling */
+        .image-gallery img {
+            width: 100%;
+            height: auto;
+            border-radius: 12px;
+            object-fit: cover;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        /* Hover effect */
+        /* .image-gallery img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 12px 20px rgba(0,0,0,0.2);
+        } */
+
+        /* Optional: responsive behavior for very small screens */
+        @media (max-width: 600px) {
+            .image-gallery {
+                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="image-gallery" id="gallery">
+        <!-- Images will be inserted dynamically -->
+    </div>
+
+    <script>
+        const gallery = document.getElementById('gallery');
+        for (let i = 1; i <= 82; i++) {
+            const img = document.createElement('img');
+            img.src = `imgs/Artboard ${i}.jpg`;
+            img.alt = `HOM Seafood ${i}`;
+            gallery.appendChild(img);
+        }
+    </script>
+
+</body>
+</html>
